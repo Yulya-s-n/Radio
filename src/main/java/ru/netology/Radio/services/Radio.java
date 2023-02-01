@@ -60,7 +60,7 @@ public class Radio {
 
 
     public void VolumePrev() {
-        if (currentVolume != 0) {     //!= не равна нулю
+        if (currentVolume != 0) {     
             currentVolume--;
         } else {
             currentVolume = 10;

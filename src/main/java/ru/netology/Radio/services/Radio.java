@@ -24,6 +24,22 @@ public class Radio {
         this.currentStation = currentStation;
     }
 
+    public void StationNext() {
+        if (currentStation != 9) {
+            currentStation++;
+        } else {
+            currentStation = 0;
+        }
+    }
+
+    public void StationPrev() {
+        if (currentStation != 0) {     //!= не равна нулю
+            currentStation--;
+        } else {
+            currentStation = 9;
+        }
+    }
+
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume < 0) {
             return;
@@ -34,4 +50,20 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 
+    public void VolumeNext() {
+        if (currentVolume != 10) {
+            currentVolume++;
+        } else {
+            currentVolume = 0;
+        }
+    }
+
+    public void VolumePrev() {
+        if (currentVolume != 0) {     //!= не равна нулю
+            currentVolume--;
+        } else {
+            currentVolume = 10;
+        }
+
+    }
 }

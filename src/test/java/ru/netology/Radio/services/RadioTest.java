@@ -185,9 +185,8 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    /*тесты на переключение следующей и предыдущей станции8/
-
-     */
+    /*тесты на переключение следующей и предыдущей станции и звука/
+*/
     @Test
     public void testStationNext() {
         radio.setCurrentStation(6);

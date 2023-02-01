@@ -33,7 +33,7 @@ public class Radio {
     }
 
     public void StationPrev() {
-        if (currentStation != 0) {     //!= не равна нулю
+        if (currentStation != 0) {      //!= не равна нулю
             currentStation--;
         } else {
             currentStation = 9;
@@ -60,7 +60,7 @@ public class Radio {
 
 
     public void VolumePrev() {
-        if (currentVolume != 0) {     
+        if (currentVolume != 0) {
             currentVolume--;
         } else {
             currentVolume = 10;

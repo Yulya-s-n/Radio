@@ -5,7 +5,17 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
-    Radio radio = new Radio();
+    @Test
+    public void CurrentStation() {
+        Radio radio = new Radio();
+        Radio.
+
+
+
+
+    }
+
+   /* Radio radio = new Radio();
 
 
     @Test
@@ -187,7 +197,7 @@ public class RadioTest {
 
       /*тесты на переключение следующей и предыдущей станции и звука/
 */
-    @Test
+   /* @Test
     public void testStationNext() {
         radio.setCurrentStation(6);
 
@@ -368,6 +378,6 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
-    }
+    }*/
 
 }

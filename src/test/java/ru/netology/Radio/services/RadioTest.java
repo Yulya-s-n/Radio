@@ -5,17 +5,8 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
-    @Test
-    public void CurrentStation() {
-        Radio radio = new Radio();
-        Radio.
 
-
-
-
-    }
-
-   /* Radio radio = new Radio();
+    Radio radio = new Radio();
 
 
     @Test
@@ -195,13 +186,14 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-      /*тесты на переключение следующей и предыдущей станции и звука/
-*/
-   /* @Test
+
+    /*тесты на переключение следующей и предыдущей станции и звука/
+     */
+    @Test
     public void testStationNext() {
         radio.setCurrentStation(6);
 
-        radio.StationNext();
+        radio.stationNext();
 
         int expected = 7;
         int actual = radio.getCurrentStation();
@@ -213,7 +205,7 @@ public class RadioTest {
     public void testStationNext2() {
         radio.setCurrentStation(7);
 
-        radio.StationNext();
+        radio.stationNext();
 
         int expected = 8;
         int actual = radio.getCurrentStation();
@@ -224,7 +216,7 @@ public class RadioTest {
     @Test
     public void testStation() {
         radio.setCurrentStation(1);
-        radio.StationNext();
+        radio.stationNext();
 
         int expected = 2;
         int actual = radio.getCurrentStation();
@@ -235,7 +227,7 @@ public class RadioTest {
     @Test
     public void testStationMax() {
         radio.setCurrentStation(9);
-        radio.StationNext();
+        radio.stationNext();
 
         int expected = 0;
         int actual = radio.getCurrentStation();
@@ -246,7 +238,7 @@ public class RadioTest {
     @Test
     public void testStationNex() {
         radio.setCurrentStation(8);
-        radio.StationNext();
+        radio.stationNext();
 
         int expected = 9;
         int actual = radio.getCurrentStation();
@@ -257,7 +249,7 @@ public class RadioTest {
     @Test
     public void testStationNul() {
         radio.setCurrentStation(0);
-        radio.StationNext();
+        radio.stationNext();
 
         int expected = 1;
         int actual = radio.getCurrentStation();
@@ -268,7 +260,7 @@ public class RadioTest {
     @Test
     public void testStationPrevNul() {
         radio.setCurrentStation(0);
-        radio.StationPrev();
+        radio.stationPrev();
 
         int expected = 9;
         int actual = radio.getCurrentStation();
@@ -279,7 +271,7 @@ public class RadioTest {
     @Test
     public void testStationPrevMax() {
         radio.setCurrentStation(9);
-        radio.StationPrev();
+        radio.stationPrev();
 
         int expected = 8;
         int actual = radio.getCurrentStation();
@@ -291,7 +283,7 @@ public class RadioTest {
     @Test
     public void testStationPrev() {
         radio.setCurrentStation(8);
-        radio.StationPrev();
+        radio.stationPrev();
 
         int expected = 7;
         int actual = radio.getCurrentStation();
@@ -300,13 +292,11 @@ public class RadioTest {
     }
 
 
-
-
     @Test
     public void testVolumeNext() {
         radio.setCurrentVolume(7);
 
-        radio.VolumeNext();
+        radio.volumeNext();
 
         int expected = 8;
         int actual = radio.getCurrentVolume();
@@ -317,7 +307,7 @@ public class RadioTest {
     @Test
     public void testVolume() {
         radio.setCurrentVolume(1);
-        radio.VolumeNext();
+        radio.volumeNext();
 
         int expected = 2;
         int actual = radio.getCurrentVolume();
@@ -328,7 +318,7 @@ public class RadioTest {
     @Test
     public void testVolumeMax() {
         radio.setCurrentVolume(10);
-        radio.VolumeNext();
+        radio.volumeNext();
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -339,7 +329,7 @@ public class RadioTest {
     @Test
     public void testVolumeNul() {
         radio.setCurrentVolume(0);
-        radio.VolumeNext();
+        radio.volumeNext();
 
         int expected = 1;
         int actual = radio.getCurrentVolume();
@@ -350,7 +340,7 @@ public class RadioTest {
     @Test
     public void testVolumePrevNul() {
         radio.setCurrentVolume(0);
-        radio.VolumePrev();
+        radio.volumePrev();
 
         int expected = 10;
         int actual = radio.getCurrentVolume();
@@ -361,7 +351,7 @@ public class RadioTest {
     @Test
     public void testVolumePrevMax() {
         radio.setCurrentVolume(10);
-        radio.VolumePrev();
+        radio.volumeNext();
 
         int expected = 9;
         int actual = radio.getCurrentVolume();
@@ -372,12 +362,12 @@ public class RadioTest {
     @Test
     public void testVolumePrev() {
         radio.setCurrentVolume(8);
-        radio.VolumePrev();
+        radio.volumePrev();
 
         int expected = 7;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
-    }*/
+    }
 
 }

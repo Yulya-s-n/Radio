@@ -1,8 +1,6 @@
 package ru.netology.Radio.services;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -10,22 +8,19 @@ import lombok.NoArgsConstructor;
 
 public class Radio {
 
-    
-    private int id;
-    private String name;
-    private int currentStation;
-    private int maxStation;
-    private int minStation;
-    private boolean on;
-}
+    private int currentStation =0;
+    private int maxStation = 9;
+    private int minStation = 0;
+    private int stationNext = 0;
+    private int stationPrev = 0;
 
-   /* private int maxVolume;
-    private int minVolume;
-    private int currentVolume;*/
+    private int maxVolume =10;
+    private int minVolume =0;
+    private int currentVolume = 0;
 
 
 
-   /* public int getCurrentStation() {
+    public int getCurrentStation() {
         return currentStation;
     }
 
@@ -44,7 +39,7 @@ public class Radio {
         this.currentStation = currentStation;
     }
 
-    public void StationNext() {
+    public void stationNext() {
         if (currentStation != 9) {
             currentStation++;
         } else {
@@ -52,7 +47,7 @@ public class Radio {
         }
     }
 
-    public void StationPrev() {
+    public void stationPrev() {
         if (currentStation != 0) {      //!= не равна нулю
             currentStation--;
         } else {
@@ -70,7 +65,7 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 
-    public void VolumeNext() {
+    public void volumeNext() {
         if (currentVolume != 10) {
             currentVolume++;
         } else {
@@ -79,12 +74,14 @@ public class Radio {
     }
 
 
-    public void VolumePrev() {
+    public void volumePrev() {
         if (currentVolume != 0) {
             currentVolume--;
         } else {
             currentVolume = 10;
         }
+    }
+}
 
-    }*/
+
 

@@ -2,97 +2,73 @@ package ru.netology.Radio.services;
 
 public class Radio {
 
-    private int maxRadioStation = 9;
-    private int minRadioStation = 0;
-    private int currentStation = minRadioStation;
+    private int currentStation;
+    private int currentVolume;
+
+    private int maxStation;
+    private int minStation;
+
+    private int maxVolume;
+    private int minVolume;
 
 
-    private int maxVolume = 100;
-    private int minVolume = 0;
+    public Radio(int stationsCount) {
+        maxStation = stationsCount - 1;
 
-    private int currentVolume = minVolume;
-
+    }
 
     public Radio() {
-
-    }
-
-    public Radio(int minRadioStation, int maxRadioStation, int minVolume, int maxVolume) {
-
-
-        this.minRadioStation =minRadioStation;
-        this.maxRadioStation =maxRadioStation;
-        this.currentStation = minRadioStation;
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
-        this.currentVolume = minVolume;
-    }
-
-    public Radio(int currentStation) {
-        this.currentStation = currentStation;
-        maxRadioStation = currentStation + 1;
+        maxStation = 9;
+        minStation = 0;
+        maxVolume = 100;
+        minVolume = 0;
     }
 
     public int getCurrentStation() {
         return currentStation;
     }
 
-    public int getMaxRadioStation() {
-        return maxRadioStation;
-    }
-
-    public int getMinRadioStation() {
-        return minRadioStation;
-    }
-
-
     public int getCurrentVolume() {
         return currentVolume;
     }
 
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-
     public void setCurrentStation(int currentStation) {
-        if (currentStation < minRadioStation) {
+
+        if (currentStation < minStation) {
             return;
         }
-        if (currentStation > maxRadioStation) {
+        if (currentStation > maxStation) {
             return;
         }
         this.currentStation = currentStation;
     }
 
-    public void stationNext() {
-        if (currentStation != maxRadioStation) {
-            currentStation++;
-        } else {
-            currentStation = minRadioStation;
-        }
-    }
-
-    public void stationPrev() {
-        if (currentStation != minRadioStation) {      //!= не равна нулю
-            currentStation--;
-        } else {
-            currentStation = maxRadioStation;
-        }
-    }
 
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume < minVolume) {
             return;
         }
         if (currentVolume > maxVolume) {
-            currentVolume = 100;
+            currentVolume = maxVolume;
         }
         this.currentVolume = currentVolume;
+    }
+
+
+    public void stationNext() {
+        if (currentStation != maxStation) {
+            currentStation++;
+        } else {
+            currentStation = minStation;
+        }
+    }
+
+    public void stationPrev() {
+        if (currentStation != minStation) {      //!= не равна нулю
+            currentStation--;
+        } else {
+            currentStation = maxStation;
+        }
     }
 
     public void volumeNext() {
@@ -109,6 +85,5 @@ public class Radio {
         } else {
             currentVolume = maxVolume;
         }
-
     }
 }
